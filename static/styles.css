@@ -1,0 +1,80 @@
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: #e5e5e5;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+    background-image: url('https://source.unsplash.com/1600x900/?landscape, clouds');
+}
+
+.card {
+    background: rgb(34,193,195);
+    background: linear-gradient(0deg, rgba(34,193,195,0.5523459383753502) 22%, rgba(17,0,112,0.9473039215686274) 100%);
+    color: white;
+    margin: 1.5em;
+    padding: 1.5em;
+    border-radius: 30px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.search-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    margin: 0.5em;
+    border-radius: 50%;
+    border: none;
+    height: 35px;
+    width: 35px;
+    outline: none;
+    background: rgb(34,193,195);
+    color: white;
+    opacity: 70%;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+    cursor: pointer;
+}
+button:hover {
+    background: #0ad15a6b;
+  }
+
+.weather {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+input.search-bar {
+    outline: none;
+    border: none;
+    margin: 0.5em;
+    padding: 0.5em;
+    border-radius: 50px;
+    opacity: 50%;
+    width:calc(100% - 100px);
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+}
+
