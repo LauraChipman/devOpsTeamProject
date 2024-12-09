@@ -44,13 +44,16 @@ jobs:
         with:
           python-version: "3.8"
 
-      # Deploy to EC2
+     # Deploy to EC2
       - name: Deploy to EC2
         run: |
-          ssh -o StrictHostKeyChecking=no -i ${{ secrets.EC2_KEY }} ubuntu@${{ secrets.EC2_HOST }} << EOF
+          echo "${{ secrets.EC2_KEY }}" > ec2_key.pem
+          chmod 600 ec2_key.pem  # Secure the key file
+          ssh -o StrictHostKeyChecking=no -i ec2_key.pem ubuntu@${{ secrets.EC2_HOST }} << EOF
           cd /var/www/flask_app
           git pull origin main
           source venv/bin/activate
           pip install -r requirements.txt
           sudo systemctl restart flask_app
           EOF
+          rm ec2_key.pem
