@@ -44,6 +44,13 @@ jobs:
         with:
           python-version: "3.8"
 
+          
+    # Debug Host
+      - name: Debug Host
+        run: |
+          echo "EC2_HOST: ${{ secrets.EC2_HOST }}"
+          ping -c 4 ${{ secrets.EC2_HOST }}
+
      # Deploy to EC2
       - name: Deploy to EC2
         run: |
